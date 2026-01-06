@@ -1,0 +1,12 @@
+schema: pc-specs-v1
+generatedUtc: 2026-01-06T07:54:14.0675211Z
+serial: PF1TYB36
+
+Model: LENOVO 20S6S0WU00
+CPU: Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz (4C/8T)
+RAM: 16 GB
+Storage (system): C:: 238 GiB (NTFS)
+GPU: Intel(R) UHD Graphics
+Display: 1920x1080 @ 60Hz, 15.3"
+Wi-Fi: Wi-Fi 6 / 6E
+Battery: 88.1% health, 69 cycles

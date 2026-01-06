@@ -1,0 +1,31 @@
+schema: pc-specs-v1
+generatedUtc: 2026-01-06T08:32:22.7623625Z
+
+Battery_CycleCount: 185
+Battery_Design_mWh: 57000
+Battery_Full_mWh: 49820
+Battery_HealthPct: 87.4
+CPU: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+CPU_Cores: 4
+CPU_Threads: 8
+Display_CurrentResolution: 1920x1200
+Display_MaxResolution: 1920x1200
+Display_RefreshHz: 60
+Display_ScreenSizeInches: 14.0
+GPU_Primary: Intel(R) Iris(R) Xe Graphics
+Model: LENOVO 20XWS01X00
+Ports_SerialPortCount: 0
+Ports_ThunderboltLikely: false
+Ports_UsbControllerCount: 1
+RAM_GiB: 15.73
+Serial: PF30RMBD
+SystemDrive: C::
+SystemDrive_Free_GiB: 431.24
+SystemDrive_FS: NTFS
+SystemDrive_Size_GiB: 476.11
+WiFi_Generation: Wi-Fi 6 / 6E
+WiFi_Radios: 802.11b 802.11g 802.11n 802.11a 802.11ac 802.11ax
+Windows_Build: 26200
+Windows_DisplayVersion: 25H2
+Windows_Product: Windows 10 Pro
+Windows_Version: 10.0.26200.0

@@ -1,0 +1,223 @@
+# schema=pc-specs-v1
+# generatedUtc=2026-01-06T08:32:22.7623625Z
+
+[Summary]
+Physical Disk: KXG6AZNV512G TOSHIBA | 476.9 GiB
+System Drive: C:: | NTFS | Size: 476.1 GiB | Free: 431.2 GiB
+Windows: Windows 10 Pro 25H2 | 10.0.26200.0 (Build 26200.7462) | Installed 2026-01-04
+
+Battery:
+  design capacity: 57,000 mWh
+  full charge capacity: 49,820 mWh (~87.4% health vs design)
+  cycle count: 185
+
+Wi-Fi:
+  generation: Wi-Fi 6 / 6E
+  radios: 802.11b 802.11g 802.11n 802.11a 802.11ac 802.11ax
+driver: Intel Corporation
+
+Display:
+  max resolution: 1920x1200
+  current resolution: 1920x1200
+  refresh: 60 Hz
+  screen size: 14.0"
+
+Ports:
+  USB controllers: 1
+  USB controller names: Intel(R) USB 3.10 eXtensible Host Controller - 1.20 (Microsoft)
+  Serial (COM) ports: 0
+  Thunderbolt: Unknown/No evidence
+
+[Identity]
+Serial=PF30RMBD
+UUID=96A63A80-CDCE-11EB-80F0-902E1635EE32
+IdentifyingNumber=PF30RMBD
+
+[Model]
+Manufacturer=LENOVO
+Model=20XWS01X00
+BaseboardManufacturer=LENOVO
+BaseboardProduct=20XWS01X00
+BaseboardSerial=L2HF16F0H77
+
+[CPU]
+Count=1
+
+[CPU.0]
+Name=11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+Manufacturer=GenuineIntel
+ProcessorId=BFEBFBFF000806C1
+Cores=4
+Threads=8
+MaxClockMHz=2803
+CurrentClockMHz=1201
+
+[RAM]
+TotalBytes=16885276672
+TotalGiB=15.73
+ModuleCount=8
+
+[RAM.Module.0]
+CapacityBytes=2147483648
+CapacityGiB=2.00
+Manufacturer=Micron Technology
+PartNumber=53E1G32D2NP-046
+SerialNumber=00000000
+SpeedMHz=4267
+ConfiguredSpeedMHz=4267
+MemoryTypeRaw=0
+FormFactorRaw=0
+DeviceLocator=Controller0-ChannelA
+BankLabel=BANK 0
+
+[RAM.Module.1]
+CapacityBytes=2147483648
+CapacityGiB=2.00
+Manufacturer=Micron Technology
+PartNumber=53E1G32D2NP-046
+SerialNumber=00000000
+SpeedMHz=4267
+ConfiguredSpeedMHz=4267
+MemoryTypeRaw=0
+FormFactorRaw=0
+DeviceLocator=Controller0-ChannelB
+BankLabel=BANK 1
+
+[RAM.Module.2]
+CapacityBytes=2147483648
+CapacityGiB=2.00
+Manufacturer=Micron Technology
+PartNumber=53E1G32D2NP-046
+SerialNumber=00000000
+SpeedMHz=4267
+ConfiguredSpeedMHz=4267
+MemoryTypeRaw=0
+FormFactorRaw=0
+DeviceLocator=Controller0-ChannelC
+BankLabel=BANK 2
+
+[RAM.Module.3]
+CapacityBytes=2147483648
+CapacityGiB=2.00
+Manufacturer=Micron Technology
+PartNumber=53E1G32D2NP-046
+SerialNumber=00000000
+SpeedMHz=4267
+ConfiguredSpeedMHz=4267
+MemoryTypeRaw=0
+FormFactorRaw=0
+DeviceLocator=Controller0-ChannelD
+BankLabel=BANK 3
+
+[RAM.Module.4]
+CapacityBytes=2147483648
+CapacityGiB=2.00
+Manufacturer=Micron Technology
+PartNumber=53E1G32D2NP-046
+SerialNumber=00000000
+SpeedMHz=4267
+ConfiguredSpeedMHz=4267
+MemoryTypeRaw=0
+FormFactorRaw=0
+DeviceLocator=Controller1-ChannelA
+BankLabel=BANK 0
+
+[RAM.Module.5]
+CapacityBytes=2147483648
+CapacityGiB=2.00
+Manufacturer=Micron Technology
+PartNumber=53E1G32D2NP-046
+SerialNumber=00000000
+SpeedMHz=4267
+ConfiguredSpeedMHz=4267
+MemoryTypeRaw=0
+FormFactorRaw=0
+DeviceLocator=Controller1-ChannelB
+BankLabel=BANK 1
+
+[RAM.Module.6]
+CapacityBytes=2147483648
+CapacityGiB=2.00
+Manufacturer=Micron Technology
+PartNumber=53E1G32D2NP-046
+SerialNumber=00000000
+SpeedMHz=4267
+ConfiguredSpeedMHz=4267
+MemoryTypeRaw=0
+FormFactorRaw=0
+DeviceLocator=Controller1-ChannelC
+BankLabel=BANK 2
+
+[RAM.Module.7]
+CapacityBytes=2147483648
+CapacityGiB=2.00
+Manufacturer=Micron Technology
+PartNumber=53E1G32D2NP-046
+SerialNumber=00000000
+SpeedMHz=4267
+ConfiguredSpeedMHz=4267
+MemoryTypeRaw=0
+FormFactorRaw=0
+DeviceLocator=Controller1-ChannelD
+BankLabel=BANK 3
+
+[Disks]
+PhysicalDiskCount=1
+
+[Disk.Physical.0]
+Model=KXG6AZNV512G TOSHIBA
+SerialNumber=8CE3_8E05_0073_4474.
+InterfaceType=SCSI
+MediaType=Fixed hard disk media
+SizeBytes=512105932800
+SizeGiB=476.94
+
+[Disk.SystemDrive]
+Drive=C::
+FileSystem=NTFS
+SizeGiB=476.11
+FreeGiB=431.24
+
+[Windows]
+Product=Windows 10 Pro
+DisplayVersion=25H2
+Version=10.0.26200.0
+Build=26200
+UBR=7462
+InstalledUtc=2026-01-04T12:28:15.0000000Z
+
+[GPU]
+Count=1
+
+[GPU.0]
+Name=Intel(R) Iris(R) Xe Graphics
+Vendor=Intel Corporation
+DriverVersion=32.0.101.7026
+VramBytes=2147479552
+VramGiB=2.00
+
+[Display]
+MaxResolution=1920x1200
+CurrentResolution=1920x1200
+RefreshHz=60
+ScreenSizeInches=14.0
+
+[WiFi]
+Generation=Wi-Fi 6 / 6E
+RadioTypesSupported=802.11b 802.11g 802.11n 802.11a 802.11ac 802.11ax
+Vendor=Intel Corporation
+DriverVersion=
+AdapterCount=0
+
+[Battery]
+DesignCapacitymWh=57000
+FullChargeCapacitymWh=49820
+HealthPct=87.4
+CycleCount=185
+
+[Ports]
+UsbControllerCount=1
+SerialPortCount=0
+PnPPortsCount=0
+ThunderboltLikely=false
+

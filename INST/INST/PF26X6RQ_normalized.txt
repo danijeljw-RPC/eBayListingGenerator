@@ -1,0 +1,31 @@
+schema: pc-specs-v1
+generatedUtc: 2026-01-06T08:37:34.2104014Z
+
+Battery_CycleCount: 118
+Battery_Design_mWh: 57020
+Battery_Full_mWh: 46720
+Battery_HealthPct: 81.9
+CPU: Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz
+CPU_Cores: 4
+CPU_Threads: 8
+Display_CurrentResolution: 1920x1080
+Display_MaxResolution: 1920x1080
+Display_RefreshHz: 60
+Display_ScreenSizeInches: 15.3
+GPU_Primary: Intel(R) UHD Graphics 620
+Model: LENOVO 20N5S2M600
+Ports_SerialPortCount: 0
+Ports_ThunderboltLikely: false
+Ports_UsbControllerCount: 1
+RAM_GiB: 15.75
+Serial: PF26X6RQ
+SystemDrive: C::
+SystemDrive_Free_GiB: 187.80
+SystemDrive_FS: NTFS
+SystemDrive_Size_GiB: 237.64
+WiFi_Generation: Wi-Fi 5
+WiFi_Radios: 802.11b 802.11g 802.11n 802.11a 802.11ac
+Windows_Build: 26200
+Windows_DisplayVersion: 25H2
+Windows_Product: Windows 10 Home
+Windows_Version: 10.0.26200.0

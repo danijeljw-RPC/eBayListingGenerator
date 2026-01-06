@@ -1,0 +1,31 @@
+schema: pc-specs-v1
+generatedUtc: 2026-01-06T07:54:14.0675211Z
+
+Battery_CycleCount: 69
+Battery_Design_mWh: 57020
+Battery_Full_mWh: 50260
+Battery_HealthPct: 88.1
+CPU: Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz
+CPU_Cores: 4
+CPU_Threads: 8
+Display_CurrentResolution: 1920x1080
+Display_MaxResolution: 1920x1080
+Display_RefreshHz: 60
+Display_ScreenSizeInches: 15.3
+GPU_Primary: Intel(R) UHD Graphics
+Model: LENOVO 20S6S0WU00
+Ports_SerialPortCount: 0
+Ports_ThunderboltLikely: false
+Ports_UsbControllerCount: 1
+RAM_GiB: 15.76
+Serial: PF1TYB36
+SystemDrive: C::
+SystemDrive_Free_GiB: 188.33
+SystemDrive_FS: NTFS
+SystemDrive_Size_GiB: 237.64
+WiFi_Generation: Wi-Fi 6 / 6E
+WiFi_Radios: 802.11b 802.11g 802.11n 802.11a 802.11ac 802.11ax
+Windows_Build: 26200
+Windows_DisplayVersion: 25H2
+Windows_Product: Windows 10 Pro
+Windows_Version: 10.0.26200.0

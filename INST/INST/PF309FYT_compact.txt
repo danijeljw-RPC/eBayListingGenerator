@@ -1,0 +1,12 @@
+schema: pc-specs-v1
+generatedUtc: 2026-01-06T08:02:07.8841465Z
+serial: PF309FYT
+
+Model: LENOVO 20W4007DAU
+CPU: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz (4C/8T)
+RAM: 16 GB
+Storage (system): C:: 238 GiB (NTFS)
+GPU: Intel(R) Iris(R) Xe Graphics
+Display: 1920x1080 @ 60Hz, 15.3"
+Wi-Fi: Wi-Fi 6 / 6E
+Battery: 90.0% health, 127 cycles

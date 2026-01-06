@@ -1,0 +1,145 @@
+# schema=pc-specs-v1
+# generatedUtc=2026-01-06T08:02:07.8841465Z
+
+[Summary]
+Physical Disk: KXG6AZNV256G TOSHIBA | 238.5 GiB
+System Drive: C:: | NTFS | Size: 237.6 GiB | Free: 189.3 GiB
+Windows: Windows 10 Pro 25H2 | 10.0.26200.0 (Build 26200.7462) | Installed 2026-01-05
+
+Battery:
+  design capacity: 57,020 mWh
+  full charge capacity: 51,300 mWh (~90.0% health vs design)
+  cycle count: 127
+
+Wi-Fi:
+  generation: Wi-Fi 6 / 6E
+  radios: 802.11b 802.11g 802.11n 802.11a 802.11ac 802.11ax
+driver: Intel Corporation
+
+Display:
+  max resolution: 1920x1080
+  current resolution: 1920x1080
+  refresh: 60 Hz
+  screen size: 15.3"
+
+Ports:
+  USB controllers: 1
+  USB controller names: Intel(R) USB 3.10 eXtensible Host Controller - 1.20 (Microsoft)
+  Serial (COM) ports: 0
+  Thunderbolt: Unknown/No evidence
+
+[Identity]
+Serial=PF309FYT
+UUID=F55BECCC-286E-11B2-A85C-BE5C4363743D
+IdentifyingNumber=PF309FYT
+
+[Model]
+Manufacturer=LENOVO
+Model=20W4007DAU
+BaseboardManufacturer=LENOVO
+BaseboardProduct=20W4007DAU
+BaseboardSerial=L1HF17C02D5
+
+[CPU]
+Count=1
+
+[CPU.0]
+Name=11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+Manufacturer=GenuineIntel
+ProcessorId=BFEBFBFF000806C1
+Cores=4
+Threads=8
+MaxClockMHz=2419
+CurrentClockMHz=907
+
+[RAM]
+TotalBytes=16889470976
+TotalGiB=15.73
+ModuleCount=2
+
+[RAM.Module.0]
+CapacityBytes=8589934592
+CapacityGiB=8.00
+Manufacturer=SK Hynix
+PartNumber=HMAA1GS6CJR6N-XN
+SerialNumber=00000000
+SpeedMHz=3200
+ConfiguredSpeedMHz=3200
+MemoryTypeRaw=0
+FormFactorRaw=12
+DeviceLocator=Controller0-ChannelA
+BankLabel=BANK 0
+
+[RAM.Module.1]
+CapacityBytes=8589934592
+CapacityGiB=8.00
+Manufacturer=Samsung
+PartNumber=M471A1G44AB0-CWE
+SerialNumber=45D66B80
+SpeedMHz=3200
+ConfiguredSpeedMHz=3200
+MemoryTypeRaw=0
+FormFactorRaw=12
+DeviceLocator=Controller1-ChannelA-DIMM0
+BankLabel=BANK 0
+
+[Disks]
+PhysicalDiskCount=1
+
+[Disk.Physical.0]
+Model=KXG6AZNV256G TOSHIBA
+SerialNumber=8CE3_8E05_0065_9A2C.
+InterfaceType=SCSI
+MediaType=Fixed hard disk media
+SizeBytes=256052966400
+SizeGiB=238.47
+
+[Disk.SystemDrive]
+Drive=C::
+FileSystem=NTFS
+SizeGiB=237.64
+FreeGiB=189.25
+
+[Windows]
+Product=Windows 10 Pro
+DisplayVersion=25H2
+Version=10.0.26200.0
+Build=26200
+UBR=7462
+InstalledUtc=2026-01-05T13:26:33.0000000Z
+
+[GPU]
+Count=1
+
+[GPU.0]
+Name=Intel(R) Iris(R) Xe Graphics
+Vendor=Intel Corporation
+DriverVersion=32.0.101.7026
+VramBytes=2147479552
+VramGiB=2.00
+
+[Display]
+MaxResolution=1920x1080
+CurrentResolution=1920x1080
+RefreshHz=60
+ScreenSizeInches=15.3
+
+[WiFi]
+Generation=Wi-Fi 6 / 6E
+RadioTypesSupported=802.11b 802.11g 802.11n 802.11a 802.11ac 802.11ax
+Vendor=Intel Corporation
+DriverVersion=
+AdapterCount=0
+
+[Battery]
+DesignCapacitymWh=57020
+FullChargeCapacitymWh=51300
+HealthPct=90.0
+CycleCount=127
+
+[Ports]
+UsbControllerCount=1
+SerialPortCount=0
+PnPPortsCount=0
+ThunderboltLikely=false
+
