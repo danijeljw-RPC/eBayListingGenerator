@@ -134,7 +134,7 @@ public static class ListingBuilder
         listing.Ports = PortCatalog.CreateDefault();
 
         // Included + Notes (with your corrected line)
-        listing.Included.Items = new() { "Laptop only", "AC charger" };
+        listing.Included.Items = new() { "Laptop only", "Generic 65W USB-C AU Power adapter / charger" };
         listing.Notes.Items = new()
         {
             "Windows is activated using an OEM license. Changes to Windows activation status depends on your Microsoft account / licensing and is not guaranteed.",
