@@ -1,0 +1,28 @@
+{
+  "MODEL_ID_HERE": {
+    "manufacturer": "ManufacturerName",
+    "modelGenericName": "Model Generic Name (type XXXX)"
+  },
+
+  "20S6S0WU00": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "T15 ThinkPad (type 20S6)"
+  },
+
+  "20U30014AU": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "L15 ThinkPad (type 20U3)"
+  },
+  "20N5S2M600": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "T590 ThinkPad (type 20N5)"
+  },
+  "20XWS01X00": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "X1 Carbon Gen 9 ThinkPad (type 20XW)"
+  },
+  "20W4007DAU": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "T15 Gen 2 ThinkPad (type 20W4)"
+  }
+}

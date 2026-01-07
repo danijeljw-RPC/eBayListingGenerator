@@ -482,4 +482,10 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# User added
 notes.txt
+[Oo]ut/
+json_template.json
+template.html
+INST/

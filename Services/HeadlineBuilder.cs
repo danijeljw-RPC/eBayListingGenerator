@@ -5,21 +5,34 @@ namespace EbayListingGenerator.Services;
 
 public static class HeadlineBuilder
 {
-    public static string BuildTitle(ListingRoot l)
+    public static string BuildTitle(
+        ListingRoot l,
+        ModelCatalog modelCatalog
+    )
     {
-        var manufacturer = (l.Identity.Manufacturer ?? "Laptop").Trim();
-        var model = (l.Identity.ModelCode ?? l.Identity.Model ?? "Unknown model").Trim();
+        var modelId = (l.Identity.ModelCode ?? l.Identity.Model)?.Trim();
+
+        if (string.IsNullOrWhiteSpace(modelId))
+        {
+            Console.Error.WriteLine(
+                "Missing model identifier in listing identity"
+            );
+            Environment.Exit(1);
+        }
+
+        var modelInfo = modelCatalog.ResolveOrFail(modelId);
+
+        var manufacturer = modelInfo.Manufacturer.Trim();
+        var modelGenericName = modelInfo.ModelGenericName.Trim();
 
         var cpu = ShortCpu(l.Specs.Cpu.Name);
 
-        // Use BOTH: readable + precise (precise remains in JSON)
         var ram = "RAM Unknown";
         if (l.Specs.Ram.ReadableGB is int rgb && rgb > 0)
             ram = $"{rgb}GB RAM";
         else if (l.Specs.Ram.TotalGiB is double tg && tg > 0.1)
             ram = $"{Format.GiBToHuman(tg)} RAM";
 
-        // Storage: marketed size (e.g. 238.5GiB => 256GB) + HDD label per your requirement
         var storage = "Storage Unknown";
         if (l.Specs.Storage.Primary.SizeGiB is double s && s > 0.1)
         {
@@ -29,8 +42,9 @@ public static class HeadlineBuilder
 
         var win = ShortWindowsTitle(l.Windows.Product);
 
-        // Required format: NO serial
-        return $"{manufacturer} (Model {model}) – {cpu} / {ram} / {storage} / {win}";
+        return
+            $"{manufacturer} {modelGenericName} (Model {modelId}) – " +
+            $"{cpu} / {ram} / {storage} / {win}";
     }
 
     public static string BuildSubtitle(ListingRoot l)
@@ -49,20 +63,20 @@ public static class HeadlineBuilder
         if (!string.IsNullOrWhiteSpace(l.Windows.DisplayVersion))
             bits.Add($"{l.Windows.Product} {l.Windows.DisplayVersion}");
 
-        return bits.Count == 0 ? "Specs from provided system snapshot." : string.Join(" • ", bits);
+        return bits.Count == 0
+            ? "Specs from provided system snapshot."
+            : string.Join(" • ", bits);
     }
 
     private static string ShortCpu(string? cpu)
     {
         if (string.IsNullOrWhiteSpace(cpu)) return "CPU Unknown";
 
-        // Remove verbose Intel(R) Core(TM) noise but keep model + @clock.
         var s = cpu.Replace("Intel(R) ", "", StringComparison.OrdinalIgnoreCase)
                    .Replace("Core(TM) ", "Core ", StringComparison.OrdinalIgnoreCase)
                    .Replace("CPU", "", StringComparison.OrdinalIgnoreCase)
                    .Trim();
 
-        // collapse double spaces
         while (s.Contains("  ", StringComparison.Ordinal))
             s = s.Replace("  ", " ", StringComparison.Ordinal);
 
@@ -91,16 +105,13 @@ public static class HeadlineBuilder
         return " " + rest;
     }
 
-    // Deterministic marketed size mapping (GiB -> GB label users expect)
     private static int ToMarketedStorageGB(double sizeGiB)
     {
-        var g = sizeGiB;
+        if (sizeGiB >= 230 && sizeGiB <= 245) return 256;
+        if (sizeGiB >= 450 && sizeGiB <= 490) return 512;
+        if (sizeGiB >= 900 && sizeGiB <= 990) return 1024;
+        if (sizeGiB >= 1800 && sizeGiB <= 1980) return 2048;
 
-        if (g >= 230 && g <= 245) return 256;
-        if (g >= 450 && g <= 490) return 512;
-        if (g >= 900 && g <= 990) return 1024;
-        if (g >= 1800 && g <= 1980) return 2048;
-
-        return (int)Math.Round(g);
+        return (int)Math.Round(sizeGiB);
     }
 }

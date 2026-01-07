@@ -90,6 +90,7 @@ public static class ListingBuilder
         listing.Specs.Storage.SystemDrive.Drive = drv?.EndsWith("::") == true
             ? drv.Substring(0, drv.Length - 1)
             : drv;
+
         listing.Specs.Storage.SystemDrive.FileSystem = NormalizedParser.StrOpt(n, "SystemDrive_FS") ?? f.SystemDriveFs;
         listing.Specs.Storage.SystemDrive.SizeGiB = NormalizedParser.DoubleOpt(n, "SystemDrive_Size_GiB") ?? f.SystemDriveSizeGiB;
         listing.Specs.Storage.SystemDrive.FreeGiB = NormalizedParser.DoubleOpt(n, "SystemDrive_Free_GiB") ?? f.SystemDriveFreeGiB;
@@ -133,7 +134,7 @@ public static class ListingBuilder
         // Ports catalogue (all disabled until you toggle them in JSON)
         listing.Ports = PortCatalog.CreateDefault();
 
-        // Included + Notes (with your corrected line)
+        // Included + Notes
         listing.Included.Items = new() { "Laptop only", "Generic 65W USB-C AU Power adapter / charger" };
         listing.Notes.Items = new()
         {
@@ -141,9 +142,9 @@ public static class ListingBuilder
             "Photos form part of the description."
         };
 
-        // Headline
-        listing.Headline.Title = HeadlineBuilder.BuildTitle(listing);
-        listing.Headline.Subtitle = HeadlineBuilder.BuildSubtitle(listing);
+        // IMPORTANT:
+        // Headline MUST be finalized in ExtractCommand (because it needs config.json / ModelCatalog).
+        // Do not build title/subtitle here.
 
         return listing;
     }
@@ -154,10 +155,9 @@ public static class ListingBuilder
         if (string.IsNullOrWhiteSpace(ram)) return null;
 
         var s = ram.Trim().ToUpperInvariant();
-        // strip "GB"
         s = s.Replace("GB", "").Trim();
-        if (int.TryParse(s, out var v) && v > 0) return v;
 
+        if (int.TryParse(s, out var v) && v > 0) return v;
         return null;
     }
 
