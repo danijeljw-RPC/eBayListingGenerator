@@ -1,6 +1,6 @@
 {
   "schema": "ebay-listing-v1",
-  "generatedUtc": "2026-01-06T18:12:01.353934Z",
+  "generatedUtc": "2026-01-07T13:20:01.441097Z",
   "identity": {
     "manufacturer": "LENOVO",
     "model": "LENOVO 20N5S2M600",
@@ -8,38 +8,71 @@
     "serial": "PF26X6RQ"
   },
   "headline": {
-    "title": "LENOVO (Model 20N5S2M600) \u2013 Core i7-8565U @ 1.80GHz / 16GB RAM / 256GB storage / Win10 Home",
-    "subtitle": "15.3\u0022 display \u2022 max 1920x1080 \u2022 1 GPU(s) \u2022 Windows 10 Home 25H2"
+    "title": "LENOVO (Model 20N5S2M600) \u2013 Core i7-8565U @ 1.80GHz / 16GB RAM / 256GB HDD / Win10 Home",
+    "subtitle": "15.3\u0022 display \u2022 max 1920x1080 \u2022 2 GPU(s) \u2022 Windows 10 Home 25H2"
   },
   "specs": {
     "cpu": {
       "name": "Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz",
       "cores": 4,
       "threads": 8,
-      "maxClockMHz": null
+      "maxClockMHz": 1992
     },
     "ram": {
       "totalGiB": 15.75,
-      "moduleCount": null,
-      "modules": []
+      "readableGB": 16,
+      "moduleCount": 2,
+      "modules": [
+        {
+          "slot": 0,
+          "capacityBytes": 8589934592,
+          "capacityGiB": 8,
+          "manufacturer": "Samsung",
+          "partNumber": "M471A1K43BB1-CTD",
+          "serialNumber": "00000000",
+          "speedMHz": 2667,
+          "configuredSpeedMHz": 2400,
+          "deviceLocator": "ChannelA-DIMM0",
+          "bankLabel": "BANK 0"
+        },
+        {
+          "slot": 1,
+          "capacityBytes": 8589934592,
+          "capacityGiB": 8,
+          "manufacturer": "SK Hynix",
+          "partNumber": "HMA81GS6JJR8N-VK",
+          "serialNumber": "532EC4DA",
+          "speedMHz": 2667,
+          "configuredSpeedMHz": 2400,
+          "deviceLocator": "ChannelB-DIMM0",
+          "bankLabel": "BANK 2"
+        }
+      ]
     },
     "gpus": [
       {
         "name": "Intel(R) UHD Graphics 620",
-        "vendor": null,
-        "driverVersion": null,
-        "vramGiB": null
+        "vendor": "Intel Corporation",
+        "driverVersion": "31.0.101.2135",
+        "vramGiB": 1
+      },
+      {
+        "name": "NVIDIA GeForce MX250",
+        "vendor": "NVIDIA",
+        "driverVersion": "32.0.15.7357",
+        "vramGiB": 2
       }
     ],
     "storage": {
       "primary": {
         "model": "SKHynix_HFS256GD9TNG-L5B0B",
-        "sizeGiB": 238.5,
-        "interface": "Unknown",
+        "sizeGiB": 238.47,
+        "sizeGB": 256,
+        "interface": "SCSI",
         "interfaceHint": null
       },
       "systemDrive": {
-        "drive": "C::",
+        "drive": "C:",
         "fileSystem": "NTFS",
         "sizeGiB": 237.64,
         "freeGiB": 187.8
@@ -255,7 +288,11 @@
   ],
   "modelReference": {
     "hasTouchScreenPotential": null,
-    "mobileData": null
+    "mobileData": {
+      "hasSimSlotPotential": null,
+      "hasWwanPotential": null,
+      "notes": null
+    }
   },
   "battery": {
     "designCapacitymWh": 57020,

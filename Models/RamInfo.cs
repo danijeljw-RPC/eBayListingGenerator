@@ -7,6 +7,10 @@ public sealed class RamInfo
     [JsonPropertyName("totalGiB")]
     public double? TotalGiB { get; set; }
 
+    // Human-friendly (e.g. 16) while totalGiB can be 15.75
+    [JsonPropertyName("readableGB")]
+    public int? ReadableGB { get; set; }
+
     [JsonPropertyName("moduleCount")]
     public int? ModuleCount { get; set; }
 
@@ -16,6 +20,13 @@ public sealed class RamInfo
 
 public sealed class RamModule
 {
+    // Required to make modules useful (slot 0/1 etc)
+    [JsonPropertyName("slot")]
+    public int Slot { get; set; }
+
+    [JsonPropertyName("capacityBytes")]
+    public long? CapacityBytes { get; set; }
+
     [JsonPropertyName("capacityGiB")]
     public double? CapacityGiB { get; set; }
 

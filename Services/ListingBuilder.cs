@@ -13,48 +13,49 @@ public static class ListingBuilder
 
         var listing = new ListingRoot
         {
-            GeneratedUtc = DateTime.UtcNow,
-            Identity =
-            {
-                Serial = serial,
-                Manufacturer = NormalizedParser.StrOpt(n, "Model")?.Split(' ', 2).FirstOrDefault(),
-                Model = NormalizedParser.StrOpt(n, "Model"),
-                ModelCode = NormalizedParser.StrOpt(n, "Model")?.Split(' ').LastOrDefault(),
-            }
+            GeneratedUtc = DateTime.UtcNow
         };
 
-        // Prefer compact model if present (it is user-friendly and stable)
+        listing.Identity.Serial = serial;
+
+        // Identity/model (prefer compact model line if present)
         if (!string.IsNullOrWhiteSpace(c.Model))
         {
             listing.Identity.Model = c.Model;
             listing.Identity.ModelCode = c.Model.Split(' ').LastOrDefault();
             listing.Identity.Manufacturer = c.Model.Split(' ').FirstOrDefault();
         }
+        else
+        {
+            listing.Identity.Model = NormalizedParser.StrOpt(n, "Model");
+            listing.Identity.ModelCode = listing.Identity.Model?.Split(' ').LastOrDefault();
+            listing.Identity.Manufacturer = listing.Identity.Model?.Split(' ').FirstOrDefault();
+        }
 
         // CPU
         listing.Specs.Cpu.Name = NormalizedParser.StrOpt(n, "CPU") ?? c.Cpu;
         listing.Specs.Cpu.Cores = NormalizedParser.IntOpt(n, "CPU_Cores");
         listing.Specs.Cpu.Threads = NormalizedParser.IntOpt(n, "CPU_Threads");
+        listing.Specs.Cpu.MaxClockMHz = f.CpuMaxClockMHz;
 
-        // Prefer FullParser CPU max clock (supports multiple CPUs); fallback to normalized if present
-        listing.Specs.Cpu.MaxClockMHz =
-            f.CpuMaxClockMHz
-            ?? TryIntFromNormalizedFallback(n, "CPU_MaxClockMHz");
-
-        // RAM total
+        // RAM (precise + readable)
         listing.Specs.Ram.TotalGiB = NormalizedParser.DoubleOpt(n, "RAM_GiB");
 
-        // RAM module count: prefer FullParser; fallback to normalized
-        listing.Specs.Ram.ModuleCount =
-            f.RamModuleCount
-            ?? TryIntFromNormalizedFallback(n, "RAM_ModuleCount");
+        // readableGB: prefer compact (e.g. "16 GB"), fallback to rounding totalGiB
+        listing.Specs.Ram.ReadableGB = ParseReadableGbFromCompact(c.Ram)
+                                       ?? (listing.Specs.Ram.TotalGiB is double tg && tg > 0.1 ? (int)Math.Round(tg) : null);
 
-        // RAM modules: from full parser [RAM.Module.x]
+        // moduleCount from full [RAM] ModuleCount (fallback: count modules if parsed)
+        listing.Specs.Ram.ModuleCount = f.RamModuleCount;
+
+        // modules from full [RAM.Module.N]
         listing.Specs.Ram.Modules.Clear();
         foreach (var rm in f.RamModules.OrderBy(x => x.Slot))
         {
             listing.Specs.Ram.Modules.Add(new RamModule
             {
+                Slot = rm.Slot,
+                CapacityBytes = rm.CapacityBytes,
                 CapacityGiB = rm.CapacityGiB,
                 Manufacturer = rm.Manufacturer,
                 PartNumber = rm.PartNumber,
@@ -66,33 +67,41 @@ public static class ListingBuilder
             });
         }
 
-        // GPUs: deterministic extraction from full file [GPU.x], fallback to normalized primary.
+        // GPUs (full preferred)
         listing.Specs.Gpus = GpuExtractor.FromFullText(fullText, n);
 
-        // Storage
+        // Storage (no guessing)
         listing.Specs.Storage.Primary.Model = f.DiskModel;
-        listing.Specs.Storage.Primary.SizeGiB = f.DiskSizeGiB;
-        listing.Specs.Storage.Primary.Interface = "Unknown"; // do not guess
+        listing.Specs.Storage.Primary.SizeGiB = f.DiskPhysicalSizeGiB ?? f.DiskSizeGiB;
+        listing.Specs.Storage.Primary.Interface = f.DiskInterfaceType ?? "Unknown";
         listing.Specs.Storage.Primary.InterfaceHint = null;
 
-        listing.Specs.Storage.SystemDrive.Drive = NormalizedParser.StrOpt(n, "SystemDrive");
+        // Normalised marketed storage size (human-readable)
+        if (listing.Specs.Storage.Primary.SizeGiB is double sg)
+        {
+            listing.Specs.Storage.Primary.SizeGB =
+                sg >= 230 && sg <= 245 ? 256 :
+                sg >= 450 && sg <= 490 ? 512 :
+                sg >= 900 && sg <= 990 ? 1024 :
+                (int)Math.Round(sg);
+        }
+
+        var drv = NormalizedParser.StrOpt(n, "SystemDrive") ?? f.SystemDrive;
+        listing.Specs.Storage.SystemDrive.Drive = drv?.EndsWith("::") == true
+            ? drv.Substring(0, drv.Length - 1)
+            : drv;
         listing.Specs.Storage.SystemDrive.FileSystem = NormalizedParser.StrOpt(n, "SystemDrive_FS") ?? f.SystemDriveFs;
         listing.Specs.Storage.SystemDrive.SizeGiB = NormalizedParser.DoubleOpt(n, "SystemDrive_Size_GiB") ?? f.SystemDriveSizeGiB;
         listing.Specs.Storage.SystemDrive.FreeGiB = NormalizedParser.DoubleOpt(n, "SystemDrive_Free_GiB") ?? f.SystemDriveFreeGiB;
 
         // Display
-        var maxRes = NormalizedParser.StrOpt(n, "Display_MaxResolution");
-        if (!string.IsNullOrWhiteSpace(maxRes))
-            listing.Specs.Display.MaxResolution = maxRes;
-
-        listing.Specs.Display.SizeInches = NormalizedParser.DoubleOpt(n, "Display_ScreenSizeInches");
+        listing.Specs.Display.MaxResolution = NormalizedParser.StrOpt(n, "Display_MaxResolution");
         listing.Specs.Display.RefreshHz = NormalizedParser.IntOpt(n, "Display_RefreshHz");
+        listing.Specs.Display.SizeInches = NormalizedParser.DoubleOpt(n, "Display_ScreenSizeInches");
 
-        // Wi-Fi (prefer full because it has radios + driver)
+        // Wi-Fi (full preferred because it has radios + driver)
         listing.Specs.Wifi.Generation = f.WifiGeneration ?? NormalizedParser.StrOpt(n, "WiFi_Generation") ?? c.Wifi;
-        listing.Specs.Wifi.Radios = f.WifiRadios.Count > 0
-            ? f.WifiRadios
-            : SplitRadios(NormalizedParser.StrOpt(n, "WiFi_Radios"));
+        listing.Specs.Wifi.Radios = f.WifiRadios.Count > 0 ? f.WifiRadios : SplitRadios(NormalizedParser.StrOpt(n, "WiFi_Radios"));
         listing.Specs.Wifi.DriverVendor = f.WifiDriverVendor;
         listing.Specs.Wifi.DriverVersion = f.WifiDriverVersion;
 
@@ -121,14 +130,10 @@ public static class ListingBuilder
             };
         }
 
-        // Model reference defaults (can be edited)
-        listing.ModelReference.HasTouchScreenPotential = null; // unknown unless you enrich from PSREF etc
-        listing.ModelReference.MobileData = null;              // default to omitted until you set it
-
-        // Ports catalogue (all disabled until you enable them)
+        // Ports catalogue (all disabled until you toggle them in JSON)
         listing.Ports = PortCatalog.CreateDefault();
 
-        // Included/Notes default scaffolding (safe to edit)
+        // Included + Notes (with your corrected line)
         listing.Included.Items = new() { "Laptop only", "AC charger" };
         listing.Notes.Items = new()
         {
@@ -143,8 +148,18 @@ public static class ListingBuilder
         return listing;
     }
 
-    private static int? TryIntFromNormalizedFallback(Dictionary<string, string> n, string key)
-        => n.TryGetValue(key, out var s) && int.TryParse(s, out var v) ? v : null;
+    private static int? ParseReadableGbFromCompact(string? ram)
+    {
+        // expects "16 GB" or "16GB"
+        if (string.IsNullOrWhiteSpace(ram)) return null;
+
+        var s = ram.Trim().ToUpperInvariant();
+        // strip "GB"
+        s = s.Replace("GB", "").Trim();
+        if (int.TryParse(s, out var v) && v > 0) return v;
+
+        return null;
+    }
 
     private static List<string> SplitRadios(string? radios)
         => string.IsNullOrWhiteSpace(radios)

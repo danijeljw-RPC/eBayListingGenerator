@@ -19,6 +19,10 @@ public sealed class StorageDisk
     [JsonPropertyName("sizeGiB")]
     public double? SizeGiB { get; set; }
 
+    // Human-readable marketed size (e.g. 256GB from 238.47GiB)
+    [JsonPropertyName("sizeGB")]
+    public int? SizeGB { get; set; }
+
     // NVMe / SATA / HDD / Unknown
     [JsonPropertyName("interface")]
     public string? Interface { get; set; }
