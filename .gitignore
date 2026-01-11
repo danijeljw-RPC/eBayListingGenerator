@@ -489,3 +489,4 @@ notes.txt
 json_template.json
 INST/
 html/
+*.listing.json
