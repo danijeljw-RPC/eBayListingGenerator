@@ -6,7 +6,7 @@ rm -rf obj
 dotnet restore
 dotnet build --no-restore
 
-BASE_DIR="./INST/INST"
+BASE_DIR="./INST"
 CONFIG="./config.json"
 OUT_DIR="./out"
 HTML_DIR="./html"
