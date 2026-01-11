@@ -23,4 +23,9 @@ public sealed class Condition
         ["trackpad"] = "Good",
         ["screen"] = "Good"
     };
+
+    // Render-only styling (not part of the JSON schema)
+    [JsonIgnore] public string GradeBg { get; set; } = "#f1f8e9";
+    [JsonIgnore] public string GradeBorder { get; set; } = "#558b2f";
+    [JsonIgnore] public string GradeText { get; set; } = "#33691e";
 }

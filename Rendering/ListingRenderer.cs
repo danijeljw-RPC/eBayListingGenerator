@@ -1,3 +1,4 @@
+using System.Text;
 using eBayListingGenerator.Grading;
 using eBayListingGenerator.Models;
 
@@ -217,13 +218,28 @@ public sealed class ListingRenderer
 
     private static string BuildShipping(ListingDocument doc, GradePalette palette)
     {
-        if (!doc.Shipping.Enabled) return "";
+        if (!doc.Shipping.Enabled)
+            return "";
 
         var bullets = HtmlFragments.UlFromLines(doc.Shipping.Bullets);
-        return $@"
-<div style=""margin: 12px 0 0 0; padding:12px 14px; border-left:5px solid {palette.LeftAccentBorder}; background:#f6f9ff; border-radius:10px;"">
-  <div style=""font-weight:800; font-size:16px; margin-bottom:6px;"">Shipping &amp; Pickup</div>
-  <ul style=""margin:0; padding-left:18px;"">{bullets}</ul>
-</div>";
+
+        var sb = new StringBuilder();
+
+        sb.AppendLine($@"<div style=""margin: 12px 0 0 0; padding:12px 14px; border-left:5px solid {palette.LeftAccentBorder}; background:#f6f9ff; border-radius:10px;"">");
+        sb.AppendLine(@"  <div style=""font-weight:800; font-size:16px; margin-bottom:6px;"">Shipping &amp; Pickup</div>");
+        sb.AppendLine(@"  <ul style=""margin:0; padding-left:18px;"">");
+        sb.AppendLine(@"    <li><strong>Free Parcel Post</strong> (Australia Post)</li>");
+        sb.AppendLine(@"    <li><strong>$23 flat fee Express Post</strong> (Australia Post)</li>");
+        sb.AppendLine(@"    <li><strong>Local pickup available</strong> (Newtown, NSW)</li>");
+        sb.AppendLine(@"  </ul>");
+        sb.AppendLine(@"</div>");
+
+        return sb.ToString();
+
+        //         return $@"
+        // <div style=""margin: 12px 0 0 0; padding:12px 14px; border-left:5px solid {palette.LeftAccentBorder}; background:#f6f9ff; border-radius:10px;"">
+        //   <div style=""font-weight:800; font-size:16px; margin-bottom:6px;"">Shipping &amp; Pickup</div>
+        //   <ul style=""margin:0; padding-left:18px;"">{bullets}</ul>
+        // </div>";
     }
 }

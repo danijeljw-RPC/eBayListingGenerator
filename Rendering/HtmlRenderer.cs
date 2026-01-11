@@ -269,7 +269,10 @@ WWAN / SIM support is model-dependent and may require antennas, tray, and card n
     {
         // Always render (you’ll likely want it even if basic)
         var grade = Html.Escape(l.Condition.Grade);
-        var badge = $@"<span style=""background:#f7f7f7; border:1px solid #9e9e9e; color:#333; padding:2px 8px; border-radius:999px;"">{grade}</span>";
+        var c = l.Condition;
+
+        var badge = $@"<span style=""padding:2px 10px; border-radius:999px; font-weight:600; display:inline-block; background:{Html.Escape(c.GradeBg)}; border:1px solid {Html.Escape(c.GradeBorder)}; color:{Html.Escape(c.GradeText)};"">{grade}</span>";
+
 
         var parts = new StringBuilder();
         parts.AppendLine(@"<div style=""margin-top:20px; padding:14px; border:1px solid #eaeaea; border-radius:10px; background:#fcfcfc;"">");
