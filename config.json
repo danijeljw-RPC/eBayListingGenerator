@@ -24,5 +24,17 @@
   "20W4007DAU": {
     "manufacturer": "Lenovo",
     "modelGenericName": "T15 Gen 2 ThinkPad (type 20W4)"
+  },
+  "20VE": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "ThinkBook 15 G2 ITL (type 20VE)"
+  },
+  "20T0003FAU": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "T14s ThinkPad (type 20T0)"
+  },
+  "20NQS05A00": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "T14s ThinkPad (type 20T0)"
   }
 }
