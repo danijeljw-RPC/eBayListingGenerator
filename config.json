@@ -35,6 +35,10 @@
   },
   "20NQS05A00": {
     "manufacturer": "Lenovo",
-    "modelGenericName": "T14s ThinkPad (type 20T0)"
+    "modelGenericName": "ThinkPad X390 Yoga (type 20NQ)"
+  },
+  "20T40027AU": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "P15s Gen 1 ThinkPad (type 20T4)"
   }
 }
