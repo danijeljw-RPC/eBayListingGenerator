@@ -52,5 +52,13 @@
   "20W6004PAU": {
     "manufacturer": "Lenovo",
     "modelGenericName": "P15s Gen 2 (Type 20W6, 20W7)"
+  },
+  "20NXS00U00": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "T490s ThinkPad (type 20NX, 20NY)"
+  },
+  "20NXS03L00": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "T490s ThinkPad (type 20NX, 20NY)"
   }
 }
