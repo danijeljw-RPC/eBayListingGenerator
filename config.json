@@ -40,5 +40,17 @@
   "20T40027AU": {
     "manufacturer": "Lenovo",
     "modelGenericName": "P15s Gen 1 ThinkPad (type 20T4)"
+  },
+  "20N6S01X00": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "P53s (Type 20N6, 20N7)"
+  },
+  "20STS0RA00": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "P15 Gen 1 (type 20ST, 20SU)"
+  },
+  "20W6004PAU": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "P15s Gen 2 (Type 20W6, 20W7)"
   }
 }

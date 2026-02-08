@@ -199,7 +199,7 @@ public static class FullParser
             var manu = NullIfEmpty(s.GetString("Manufacturer"));
             var devLoc = NullIfEmpty(s.GetString("DeviceLocator"));
 
-            // If it’s totally empty, don’t add noise
+            // If it's totally empty, don't add noise
             if (capBytes is null && capGiB is null && manu is null && devLoc is null)
                 return;
 

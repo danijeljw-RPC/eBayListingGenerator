@@ -43,7 +43,7 @@ public static class HeadlineBuilder
         var win = ShortWindowsTitle(l.Windows.Product);
 
         return
-            $"{manufacturer} {modelGenericName} (Model {modelId}) – " +
+            $"{manufacturer} {modelGenericName} (Model {modelId}) - " +
             $"{cpu} / {ram} / {storage} / {win}";
     }
 
@@ -65,7 +65,7 @@ public static class HeadlineBuilder
 
         return bits.Count == 0
             ? "Specs from provided system snapshot."
-            : string.Join(" • ", bits);
+            : string.Join(" &bull; ", bits);
     }
 
     private static string ShortCpu(string? cpu)

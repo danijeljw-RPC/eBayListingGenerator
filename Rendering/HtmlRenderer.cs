@@ -20,7 +20,7 @@ public static class HtmlRenderer
             ["{{SECTION_BATTERY}}"] = BuildBattery(listing),
             ["{{SECTION_MOBILE_DATA}}"] = BuildMobileData(listing),
             ["{{SECTION_PORTS}}"] = BuildPorts(listing),
-            ["{{SECTION_INCLUDED}}"] = BuildSimpleSection("What’s Included", listing.Included.Items),
+            ["{{SECTION_INCLUDED}}"] = BuildSimpleSection("What's Included", listing.Included.Items),
             ["{{SECTION_NOTES}}"] = BuildSimpleSection("Notes", listing.Notes.Items),
             ["{{SECTION_CONDITION}}"] = BuildCondition(listing),
             ["{{SECTION_SHIPPING}}"] = string.Empty,
@@ -166,7 +166,7 @@ public static class HtmlRenderer
 
         if (li.Count == 0) return string.Empty;
 
-        return Section("Wi‑Fi", Ul(li));
+        return Section("Wi-Fi", Ul(li));
     }
 
     private static string BuildDisplay(ListingRoot l)
@@ -267,7 +267,7 @@ WWAN / SIM support is model-dependent and may require antennas, tray, and card n
 
     private static string BuildCondition(ListingRoot l)
     {
-        // Always render (you’ll likely want it even if basic)
+        // Always render (you'll likely want it even if basic)
         var grade = Html.Escape(l.Condition.Grade);
         var c = l.Condition;
 

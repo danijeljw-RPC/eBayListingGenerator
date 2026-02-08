@@ -22,3 +22,5 @@ for json in "$OUT_DIR"/*.listing.json; do
     --template default \
     --out "$HTML_DIR/$serial.html"
 done
+
+find "$HTML_DIR" -type f -name "*.html" -exec gsed -i 's/&amp;bull;/\&bull;/g' {} +

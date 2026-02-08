@@ -2,7 +2,7 @@ namespace eBayListingGenerator.Grading;
 
 public sealed class GradePalette
 {
-    // Background + border chosen to “make sense” and be readable in eBay’s HTML.
+    // Background + border chosen to “make sense” and be readable in eBay's HTML.
     public required string BadgeBackground { get; init; }
     public required string BadgeBorder { get; init; }
     public required string BadgeText { get; init; }
