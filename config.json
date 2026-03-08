@@ -3,12 +3,10 @@
     "manufacturer": "ManufacturerName",
     "modelGenericName": "Model Generic Name (type XXXX)"
   },
-
   "20S6S0WU00": {
     "manufacturer": "Lenovo",
     "modelGenericName": "T15 ThinkPad (type 20S6)"
   },
-
   "20U30014AU": {
     "manufacturer": "Lenovo",
     "modelGenericName": "L15 ThinkPad (type 20U3)"
@@ -47,7 +45,81 @@
   },
   "20STS0RA00": {
     "manufacturer": "Lenovo",
-    "modelGenericName": "P15 Gen 1 (type 20ST, 20SU)"
+    "modelGenericName": "P15 Gen 1 (type 20ST, 20SU)",
+    "ports": [
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.2 Gen 1)",
+        "count": 2,
+        "notes": "5Gbps"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C (USB 3.2 Gen 1, with Power Delivery + DisplayPort 1.2)",
+        "count": 1,
+        "notes": "USB-PD + DP 1.2 (PSREF wording)"
+      },
+      {
+        "enabled": true,
+        "name": "Thunderbolt 3 (USB-C)",
+        "count": 2,
+        "notes": "40Gbps; DP + charging"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C Power Delivery",
+        "count": 3,
+        "notes": "Charging via USB-C"
+      },
+      {
+        "enabled": true,
+        "name": "HDMI 2.0",
+        "count": 1,
+        "notes": "4K@60Hz capable (model dependent)"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C DisplayPort Alt Mode",
+        "count": 3,
+        "notes": "Video over USB-C"
+      },
+      {
+        "enabled": true,
+        "name": "RJ45 Ethernet",
+        "count": 1,
+        "notes": "Built-in Ethernet port"
+      },
+      {
+        "enabled": true,
+        "name": "Kensington lock slot",
+        "count": 1,
+        "notes": "Standard Kensington security slot"
+      },
+      {
+        "enabled": true,
+        "name": "3.5mm headphone / microphone combo jack",
+        "count": 1,
+        "notes": "TRRS combo"
+      },
+      {
+        "enabled": true,
+        "name": "SD card reader",
+        "count": 1,
+        "notes": "Full-size SD"
+      },
+      {
+        "enabled": true,
+        "name": "Nano-SIM slot",
+        "count": 1,
+        "notes": "WWAN/SIM models only"
+      },
+      {
+        "enabled": true,
+        "name": "Power connector (proprietary)",
+        "count": 1,
+        "notes": "PSREF often labels simply as 'Power connector'"
+      }
+    ]
   },
   "20W6004PAU": {
     "manufacturer": "Lenovo",
@@ -60,5 +132,9 @@
   "20NXS03L00": {
     "manufacturer": "Lenovo",
     "modelGenericName": "T490s ThinkPad (type 20NX, 20NY)"
+  },
+  "20R3001YAU": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "L13 ThinkPad (type 20R3)"
   }
 }
