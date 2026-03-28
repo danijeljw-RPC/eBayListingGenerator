@@ -9,7 +9,99 @@
   },
   "20U30014AU": {
     "manufacturer": "Lenovo",
-    "modelGenericName": "L15 ThinkPad (type 20U3)"
+    "modelGenericName": "L15 ThinkPad (type 20U3)",
+    "ports": [
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.2 Gen 1)",
+        "count": 1,
+        "notes": "5Gbps"
+      },
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.2 Gen 1, Always On)",
+        "count": 1,
+        "notes": "Always On / charging port"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C (USB 3.2 Gen 1, with Power Delivery + DisplayPort 1.2)",
+        "count": 1,
+        "notes": "USB-PD + DP 1.2 (PSREF wording)"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C (USB 3.1 Gen 2)",
+        "count": 1,
+        "notes": "10Gbps; may support DP Alt Mode"
+      },
+      {
+        "enabled": true,
+        "name": "Thunderbolt 3 (USB-C)",
+        "count": 1,
+        "notes": "40Gbps; DP + charging"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C Power Delivery",
+        "count": 2,
+        "notes": "Charging via USB-C"
+      },
+      {
+        "enabled": true,
+        "name": "HDMI 1.4b",
+        "count": 1,
+        "notes": "Often used on business models"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C DisplayPort Alt Mode",
+        "count": 2,
+        "notes": "Video over USB-C"
+      },
+      {
+        "enabled": true,
+        "name": "RJ45 Ethernet",
+        "count": 1,
+        "notes": "Built-in Ethernet port"
+      },
+      {
+        "enabled": true,
+        "name": "Kensington lock slot",
+        "count": 1,
+        "notes": "Standard Kensington security slot"
+      },
+      {
+        "enabled": true,
+        "name": "3.5mm headphone / microphone combo jack",
+        "count": 1,
+        "notes": "TRRS combo"
+      },
+      {
+        "enabled": true,
+        "name": "microSD card reader",
+        "count": 1,
+        "notes": "microSD"
+      },
+      {
+        "enabled": true,
+        "name": "Smart card reader",
+        "count": 1,
+        "notes": "Optional on some configs"
+      },
+      {
+        "enabled": true,
+        "name": "Side docking connector",
+        "count": 1,
+        "notes": "Proprietary dock"
+      },
+      {
+        "enabled": true,
+        "name": "Nano-SIM slot",
+        "count": 1,
+        "notes": "WWAN/SIM models only"
+      }
+    ]
   },
   "20N5S2M600": {
     "manufacturer": "Lenovo",
