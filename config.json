@@ -5,7 +5,96 @@
   },
   "20S6S0WU00": {
     "manufacturer": "Lenovo",
-    "modelGenericName": "T15 ThinkPad (type 20S6)"
+    "modelGenericName": "T15 Gen 1 ThinkPad (type 20S6, 20S7)",
+    "ports": [
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.2 Gen 1)",
+        "count": 1,
+        "notes": "5Gbps"
+      },
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.2 Gen 1, Always On)",
+        "count": 1,
+        "notes": "Always On / charging port"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C (USB 3.2 Gen 1, with Power Delivery + DisplayPort 1.2)",
+        "count": 1,
+        "notes": "USB-PD + DP 1.2 (PSREF wording)"
+      },
+      {
+        "enabled": true,
+        "name": "Thunderbolt 3 (USB-C)",
+        "count": 1,
+        "notes": "40Gbps; DP + charging"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C Power Delivery",
+        "count": 2,
+        "notes": "Charging via USB-C"
+      },
+      {
+        "enabled": true,
+        "name": "HDMI 1.4b",
+        "count": 1,
+        "notes": "Often used on business models"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C DisplayPort Alt Mode",
+        "count": 2,
+        "notes": "Video over USB-C"
+      },
+      {
+        "enabled": true,
+        "name": "RJ45 Ethernet",
+        "count": 1,
+        "notes": "Built-in Ethernet port"
+      },
+      {
+        "enabled": true,
+        "name": "Kensington lock slot",
+        "count": 1,
+        "notes": "Standard Kensington security slot"
+      },
+      {
+        "enabled": true,
+        "name": "3.5mm headphone / microphone combo jack",
+        "count": 1,
+        "notes": "TRRS combo"
+      },
+      {
+        "enabled": true,
+        "name": "microSD card reader",
+        "count": 1,
+        "notes": "microSD"
+      },
+      {
+        "enabled": true,
+        "name": "Side docking connector",
+        "count": 1,
+        "notes": "Proprietary dock"
+      }
+    ],
+    "yearOfRelease": 2020,
+    "dimensions": {
+      "widthCm": 36.58,
+      "depthCm": 24.8,
+      "heightCm": 1.91,
+      "widthIn": 14.4,
+      "depthIn": 9.76,
+      "heightIn": 0.75
+    },
+    "weight": {
+      "kg": 1.81,
+      "lbs": 3.99,
+      "notes": "Starting at 1.81 kg for FHD non-touch / FHD touch models; UHD models start at 1.74 kg"
+    },
+    "screenBrightnessNits": "250 / 300 / 500"
   },
   "20U30014AU": {
     "manufacturer": "Lenovo",
@@ -105,7 +194,114 @@
   },
   "20N5S2M600": {
     "manufacturer": "Lenovo",
-    "modelGenericName": "T590 ThinkPad (type 20N5)"
+    "modelGenericName": "T590 ThinkPad (type 20N4, 20N5)",
+    "ports": [
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.1 Gen 1)",
+        "count": 1,
+        "notes": "5Gbps"
+      },
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.1 Gen 1, Always On)",
+        "count": 1,
+        "notes": "Always On / charging port"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C (USB 3.1 Gen 1)",
+        "count": 1,
+        "notes": "5Gbps; supports Power Delivery and DisplayPort"
+      },
+      {
+        "enabled": true,
+        "name": "Thunderbolt 3 (USB-C)",
+        "count": 1,
+        "notes": "40Gbps; DP + charging"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C Power Delivery",
+        "count": 2,
+        "notes": "Charging via USB-C"
+      },
+      {
+        "enabled": true,
+        "name": "HDMI 1.4b",
+        "count": 1,
+        "notes": "Often used on business models"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C DisplayPort Alt Mode",
+        "count": 2,
+        "notes": "Video over USB-C"
+      },
+      {
+        "enabled": true,
+        "name": "RJ45 Ethernet",
+        "count": 1,
+        "notes": "Built-in Ethernet port"
+      },
+      {
+        "enabled": true,
+        "name": "Ethernet extension connector (mini RJ-45)",
+        "count": 1,
+        "notes": "RJ45 via proprietary dongle/adapter / side mechanical docking connector area"
+      },
+      {
+        "enabled": true,
+        "name": "Side docking connector",
+        "count": 1,
+        "notes": "Proprietary dock"
+      },
+      {
+        "enabled": true,
+        "name": "Kensington lock slot",
+        "count": 1,
+        "notes": "Standard Kensington security slot"
+      },
+      {
+        "enabled": true,
+        "name": "3.5mm headphone / microphone combo jack",
+        "count": 1,
+        "notes": "TRRS combo"
+      },
+      {
+        "enabled": true,
+        "name": "microSD card reader",
+        "count": 1,
+        "notes": "microSD"
+      },
+      {
+        "enabled": true,
+        "name": "Smart card reader",
+        "count": 1,
+        "notes": "Optional on some configs"
+      },
+      {
+        "enabled": true,
+        "name": "Nano-SIM slot",
+        "count": 1,
+        "notes": "WWAN/SIM models only"
+      }
+    ],
+    "yearOfRelease": 2019,
+    "dimensions": {
+      "widthCm": 36.58,
+      "depthCm": 24.8,
+      "heightCm": 1.91,
+      "widthIn": 14.4,
+      "depthIn": 9.76,
+      "heightIn": 0.75
+    },
+    "weight": {
+      "kg": 1.75,
+      "lbs": 3.87,
+      "notes": "Starting at 1.75 kg"
+    },
+    "screenBrightnessNits": "250 / 500"
   },
   "20XWS01X00": {
     "manufacturer": "Lenovo",
@@ -228,5 +424,80 @@
   "20R3001YAU": {
     "manufacturer": "Lenovo",
     "modelGenericName": "L13 ThinkPad (type 20R3)"
+  },
+  "20XW001CAU": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "X1 Carbon 9th Gen ThinkPad (type 20XW, 20XX)",
+    "ports": [
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.2 Gen 1)",
+        "count": 1,
+        "notes": "5Gbps"
+      },
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.2 Gen 1, Always On)",
+        "count": 1,
+        "notes": "Always On / charging port"
+      },
+      {
+        "enabled": true,
+        "name": "Thunderbolt 4 / USB4 (USB-C, with USB-PD 3.0 + DisplayPort 1.4a)",
+        "count": 2,
+        "notes": "40Gbps; PD 3.0 + DP 1.4a (PSREF wording)"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C Power Delivery",
+        "count": 2,
+        "notes": "Charging via USB-C"
+      },
+      {
+        "enabled": true,
+        "name": "HDMI 2.0",
+        "count": 1,
+        "notes": "4K@60Hz capable (model dependent)"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C DisplayPort Alt Mode",
+        "count": 2,
+        "notes": "Video over USB-C"
+      },
+      {
+        "enabled": true,
+        "name": "Kensington Nano Security Slot",
+        "count": 1,
+        "notes": "2.5mm x 6mm Nano slot (PSREF wording)"
+      },
+      {
+        "enabled": true,
+        "name": "3.5mm headphone / microphone combo jack",
+        "count": 1,
+        "notes": "TRRS combo"
+      },
+      {
+        "enabled": true,
+        "name": "Nano-SIM slot",
+        "count": 1,
+        "notes": "WWAN/SIM models only"
+      }
+    ],
+    "yearOfRelease": 2021,
+    "dimensions": {
+      "widthCm": 31.5,
+      "depthCm": 22.16,
+      "heightCm": 1.49,
+      "widthIn": 12.4,
+      "depthIn": 8.72,
+      "heightIn": 0.59
+    },
+    "weight": {
+      "kg": 1.133,
+      "lbs": 2.49,
+      "notes": "Starting at 1.133 kg"
+    },
+    "screenBrightnessNits": "400 / 500"
   }
 }
