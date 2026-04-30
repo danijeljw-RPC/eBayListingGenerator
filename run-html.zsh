@@ -17,7 +17,8 @@ HTML_DIR="./html"
 for json in "$OUT_DIR"/*.listing.json; do
   serial="$(basename "$json" .listing.json)"
 
-  dotnet run -- render \
+  # dotnet run -- render \
+  ./publish/osx-arm64/eBayListingGenerator render \
     --json "$json" \
     --template default \
     --out "$HTML_DIR/$serial.html"

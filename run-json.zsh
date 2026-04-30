@@ -32,7 +32,7 @@ for file in "$BASE_DIR"/*.txt; do
 
   serial="${name%.txt}"
 
-  dotnet run -- extract \
+  ./publish/osx-arm64/eBayListingGenerator extract \
     --config "$CONFIG" \
     --dir "$BASE_DIR" \
     --serial "$serial" \
