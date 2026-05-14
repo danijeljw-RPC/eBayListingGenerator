@@ -311,21 +311,9 @@
     "manufacturer": "Lenovo",
     "modelGenericName": "T15 Gen 2 ThinkPad (type 20W4)"
   },
-  "20VE": {
-    "manufacturer": "Lenovo",
-    "modelGenericName": "ThinkBook 15 G2 ITL (type 20VE)"
-  },
-  "20T0003FAU": {
-    "manufacturer": "Lenovo",
-    "modelGenericName": "T14s ThinkPad (type 20T0)"
-  },
   "20NQS05A00": {
     "manufacturer": "Lenovo",
     "modelGenericName": "ThinkPad X390 Yoga (type 20NQ)"
-  },
-  "20T40027AU": {
-    "manufacturer": "Lenovo",
-    "modelGenericName": "P15s Gen 1 ThinkPad (type 20T4)"
   },
   "20N6S01X00": {
     "manufacturer": "Lenovo",
@@ -413,10 +401,6 @@
     "manufacturer": "Lenovo",
     "modelGenericName": "P15s Gen 2 (Type 20W6, 20W7)"
   },
-  "20NXS00U00": {
-    "manufacturer": "Lenovo",
-    "modelGenericName": "T490s ThinkPad (type 20NX, 20NY)"
-  },
   "20NXS03L00": {
     "manufacturer": "Lenovo",
     "modelGenericName": "T490s ThinkPad (type 20NX, 20NY)"
@@ -499,5 +483,506 @@
       "notes": "Starting at 1.133 kg"
     },
     "screenBrightnessNits": "400 / 500"
+  },
+  "20T40027AU": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "P15s Gen 1 ThinkPad (type 20T4, 20T5)",
+    "ports": [
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.2 Gen 1)",
+        "count": 1,
+        "notes": "5Gbps"
+      },
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.2 Gen 1, Always On)",
+        "count": 1,
+        "notes": "Always On / charging port"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C (USB 3.2 Gen 1, with Power Delivery + DisplayPort 1.2)",
+        "count": 1,
+        "notes": "USB-PD + DP 1.2 (PSREF wording)"
+      },
+      {
+        "enabled": true,
+        "name": "Thunderbolt 3 (USB-C)",
+        "count": 1,
+        "notes": "40Gbps; USB-C 3.1 Gen 2 + Thunderbolt 3 + PD + DP 1.2"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C Power Delivery",
+        "count": 2,
+        "notes": "Charging via USB-C"
+      },
+      {
+        "enabled": true,
+        "name": "HDMI 1.4b",
+        "count": 1,
+        "notes": "PSREF standard port"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C DisplayPort Alt Mode",
+        "count": 2,
+        "notes": "Video over USB-C; DisplayPort 1.2"
+      },
+      {
+        "enabled": true,
+        "name": "RJ45 Ethernet",
+        "count": 1,
+        "notes": "Built-in Ethernet port"
+      },
+      {
+        "enabled": true,
+        "name": "Kensington lock slot",
+        "count": 1,
+        "notes": "Kensington Security Slot, 3 x 7 mm"
+      },
+      {
+        "enabled": true,
+        "name": "3.5mm headphone / microphone combo jack",
+        "count": 1,
+        "notes": "TRRS combo"
+      },
+      {
+        "enabled": true,
+        "name": "microSD card reader",
+        "count": 1,
+        "notes": "microSD"
+      },
+      {
+        "enabled": true,
+        "name": "Nano-SIM slot",
+        "count": 1,
+        "notes": "WWAN/SIM models only"
+      },
+      {
+        "enabled": true,
+        "name": "Smart card reader",
+        "count": 1,
+        "notes": "Optional on some configurations"
+      },
+      {
+        "enabled": true,
+        "name": "Side docking connector",
+        "count": 1,
+        "notes": "Proprietary ThinkPad side docking connector"
+      }
+    ],
+    "yearOfRelease": 2020,
+    "dimensions": {
+      "widthCm": 36.58,
+      "depthCm": 24.8,
+      "heightCm": 1.91,
+      "widthIn": 14.4,
+      "depthIn": 9.76,
+      "heightIn": 0.75
+    },
+    "weight": {
+      "kg": 1.75,
+      "lbs": 3.86,
+      "notes": "Starting at 1.75 kg"
+    },
+    "screenBrightnessNits": "250 / 300 / 500"
+  },
+  "20T0003FAU": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "T14s Gen 1 ThinkPad Intel (type 20T0, 20T1)",
+    "ports": [
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.2 Gen 1)",
+        "count": 1,
+        "notes": "5Gbps"
+      },
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.2 Gen 1, Always On)",
+        "count": 1,
+        "notes": "Always On / charging port"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C (USB 3.2 Gen 1, with Power Delivery + DisplayPort 1.2)",
+        "count": 1,
+        "notes": "USB-PD + DP 1.2 (PSREF wording)"
+      },
+      {
+        "enabled": true,
+        "name": "Thunderbolt 3 (USB-C)",
+        "count": 1,
+        "notes": "40Gbps; USB-C 3.2 Gen 2 + Thunderbolt 3 + PD + DP 1.2"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C Power Delivery",
+        "count": 2,
+        "notes": "Charging via USB-C"
+      },
+      {
+        "enabled": true,
+        "name": "HDMI 1.4b",
+        "count": 1,
+        "notes": "PSREF standard port"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C DisplayPort Alt Mode",
+        "count": 2,
+        "notes": "Video over USB-C; DisplayPort 1.2"
+      },
+      {
+        "enabled": true,
+        "name": "Ethernet extension connector (mini RJ-45)",
+        "count": 1,
+        "notes": "RJ45 via ThinkPad Ethernet Extension Adapter Gen 2"
+      },
+      {
+        "enabled": true,
+        "name": "Kensington lock slot",
+        "count": 1,
+        "notes": "Kensington Security Slot"
+      },
+      {
+        "enabled": true,
+        "name": "3.5mm headphone / microphone combo jack",
+        "count": 1,
+        "notes": "TRRS combo"
+      },
+      {
+        "enabled": true,
+        "name": "microSD card reader",
+        "count": 1,
+        "notes": "microSD card slot on WLAN models"
+      },
+      {
+        "enabled": true,
+        "name": "Nano-SIM slot",
+        "count": 1,
+        "notes": "Nano-SIM + microSD card slot on WWAN support models"
+      },
+      {
+        "enabled": true,
+        "name": "Smart card reader",
+        "count": 1,
+        "notes": "Optional on some configurations"
+      },
+      {
+        "enabled": true,
+        "name": "Side docking connector",
+        "count": 1,
+        "notes": "Proprietary ThinkPad side docking connector"
+      }
+    ],
+    "yearOfRelease": 2020,
+    "dimensions": {
+      "widthCm": 32.9,
+      "depthCm": 22.62,
+      "heightCm": 1.67,
+      "widthIn": 12.95,
+      "depthIn": 8.9,
+      "heightIn": 0.66
+    },
+    "weight": {
+      "kg": 1.35,
+      "lbs": 2.98,
+      "notes": "Starting at 1.35 kg for black FHD touch / FHD non-touch / FHD Privacy Guard models"
+    },
+    "screenBrightnessNits": "250 / 300 / 400 / 500"
+  },
+  "20NXS00U00": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "T490s ThinkPad (type 20NX, 20NY)",
+    "ports": [
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.2 Gen 1)",
+        "count": 1,
+        "notes": "5Gbps"
+      },
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.2 Gen 1, Always On)",
+        "count": 1,
+        "notes": "Always On / charging port"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C (USB 3.1 Gen 1)",
+        "count": 1,
+        "notes": "USB-C 3.1 Gen 1 with data transfer, Power Delivery and DisplayPort 1.2"
+      },
+      {
+        "enabled": true,
+        "name": "Thunderbolt 3 (USB-C)",
+        "count": 1,
+        "notes": "40Gbps; USB-C 3.1 Gen 2 + Thunderbolt 3 + PD + DP 1.2"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C Power Delivery",
+        "count": 2,
+        "notes": "Charging via USB-C"
+      },
+      {
+        "enabled": true,
+        "name": "HDMI 1.4b",
+        "count": 1,
+        "notes": "PSREF standard port"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C DisplayPort Alt Mode",
+        "count": 2,
+        "notes": "Video over USB-C; DisplayPort 1.2"
+      },
+      {
+        "enabled": true,
+        "name": "Ethernet extension connector (mini RJ-45)",
+        "count": 1,
+        "notes": "RJ45 via ThinkPad Ethernet Extension Adapter Gen 2"
+      },
+      {
+        "enabled": true,
+        "name": "Kensington lock slot",
+        "count": 1,
+        "notes": "Kensington Security Slot"
+      },
+      {
+        "enabled": true,
+        "name": "3.5mm headphone / microphone combo jack",
+        "count": 1,
+        "notes": "TRRS combo"
+      },
+      {
+        "enabled": true,
+        "name": "microSD card reader",
+        "count": 1,
+        "notes": "microSD card slot on WLAN models"
+      },
+      {
+        "enabled": true,
+        "name": "Nano-SIM slot",
+        "count": 1,
+        "notes": "Nano-SIM + microSD card slot on WWAN model"
+      },
+      {
+        "enabled": true,
+        "name": "Smart card reader",
+        "count": 1,
+        "notes": "Optional on some configurations"
+      },
+      {
+        "enabled": true,
+        "name": "Side docking connector",
+        "count": 1,
+        "notes": "Proprietary ThinkPad side docking connector"
+      }
+    ],
+    "yearOfRelease": 2019,
+    "dimensions": {
+      "widthCm": 32.9,
+      "depthCm": 22.6,
+      "heightCm": 1.61,
+      "widthIn": 12.95,
+      "depthIn": 8.9,
+      "heightIn": 0.63
+    },
+    "weight": {
+      "kg": 1.27,
+      "lbs": 2.81,
+      "notes": "Starting at 1.27 kg for black models"
+    },
+    "screenBrightnessNits": "250 / 300 / 400 / 500"
+  },
+  "20VE": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "ThinkBook 15 G2 ITL (type 20VE)",
+    "ports": [
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.2 Gen 1)",
+        "count": 1,
+        "notes": "5Gbps"
+      },
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.2 Gen 1, Always On)",
+        "count": 1,
+        "notes": "Always On / charging port"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C (USB 3.1 Gen 2)",
+        "count": 1,
+        "notes": "USB-C 3.2 Gen 2 with data transfer, Power Delivery 3.0 and DisplayPort 1.4"
+      },
+      {
+        "enabled": true,
+        "name": "Thunderbolt 4 / USB4 (USB-C, with USB-PD 3.0 + DisplayPort 1.4a)",
+        "count": 1,
+        "notes": "40Gbps; PD 3.0 + DP 1.4"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C Power Delivery",
+        "count": 2,
+        "notes": "Charging via USB-C"
+      },
+      {
+        "enabled": true,
+        "name": "HDMI 1.4b",
+        "count": 1,
+        "notes": "PSREF standard port"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C DisplayPort Alt Mode",
+        "count": 2,
+        "notes": "Video over USB-C; DisplayPort 1.4"
+      },
+      {
+        "enabled": true,
+        "name": "RJ45 Ethernet",
+        "count": 1,
+        "notes": "Built-in Gigabit Ethernet port"
+      },
+      {
+        "enabled": true,
+        "name": "3.5mm headphone / microphone combo jack",
+        "count": 1,
+        "notes": "TRRS combo"
+      },
+      {
+        "enabled": true,
+        "name": "4-in-1 card reader (MMC/SD/SDHC/SDXC)",
+        "count": 1,
+        "notes": "PSREF lists 1x card reader"
+      }
+    ],
+    "yearOfRelease": 2020,
+    "dimensions": {
+      "widthCm": 35.7,
+      "depthCm": 23.5,
+      "heightCm": 1.89,
+      "widthIn": 14.1,
+      "depthIn": 9.25,
+      "heightIn": 0.74
+    },
+    "weight": {
+      "kg": 1.7,
+      "lbs": 3.75,
+      "notes": "Starting at 1.7 kg"
+    },
+    "screenBrightnessNits": "220 / 250 / 300"
+  },
+  "20L9001MUS": {
+    "manufacturer": "Lenovo",
+    "modelGenericName": "T580 ThinkPad (type 20L9, 20LA)",
+    "ports": [
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.0 / 3.1 Gen 1)",
+        "count": 1,
+        "notes": "5Gbps"
+      },
+      {
+        "enabled": true,
+        "name": "USB-A (USB 3.0 / 3.1 Gen 1, Always On)",
+        "count": 1,
+        "notes": "Always On / charging port"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C (USB 3.1 Gen 1)",
+        "count": 1,
+        "notes": "USB-C Gen 1 with Power Delivery and DisplayPort"
+      },
+      {
+        "enabled": true,
+        "name": "Thunderbolt 3 (USB-C)",
+        "count": 1,
+        "notes": "USB-C Gen 2 / Thunderbolt 3 with Power Delivery and DisplayPort"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C Power Delivery",
+        "count": 2,
+        "notes": "Charging via USB-C"
+      },
+      {
+        "enabled": true,
+        "name": "HDMI 1.4b",
+        "count": 1,
+        "notes": "PSREF standard port"
+      },
+      {
+        "enabled": true,
+        "name": "USB-C DisplayPort Alt Mode",
+        "count": 2,
+        "notes": "Video over USB-C"
+      },
+      {
+        "enabled": true,
+        "name": "RJ45 Ethernet",
+        "count": 1,
+        "notes": "Built-in Ethernet port"
+      },
+      {
+        "enabled": true,
+        "name": "Kensington lock slot",
+        "count": 1,
+        "notes": "Security keyhole"
+      },
+      {
+        "enabled": true,
+        "name": "3.5mm headphone / microphone combo jack",
+        "count": 1,
+        "notes": "TRRS combo"
+      },
+      {
+        "enabled": true,
+        "name": "4-in-1 card reader (MMC/SD/SDHC/SDXC)",
+        "count": 1,
+        "notes": "PSREF standard port"
+      },
+      {
+        "enabled": true,
+        "name": "Nano-SIM slot",
+        "count": 1,
+        "notes": "WWAN models only"
+      },
+      {
+        "enabled": true,
+        "name": "Smart card reader",
+        "count": 1,
+        "notes": "Optional on some configurations"
+      },
+      {
+        "enabled": true,
+        "name": "Side docking connector",
+        "count": 1,
+        "notes": "Proprietary ThinkPad side docking connector"
+      }
+    ],
+    "yearOfRelease": 2018,
+    "dimensions": {
+      "widthCm": 36.58,
+      "depthCm": 25.28,
+      "heightCm": 2.02,
+      "widthIn": 14.4,
+      "depthIn": 9.95,
+      "heightIn": 0.8
+    },
+    "weight": {
+      "kg": 1.95,
+      "lbs": 4.29,
+      "notes": "Starting at 1.95 kg for integrated graphics model"
+    },
+    "screenBrightnessNits": "220 / 250 / 300"
   }
 }
